@@ -71,7 +71,7 @@ Implementation of the SDK should be done by following user stories. Bellow-defin
 
 **[WIP]**
 
-[Untitled](https://www.notion.so/1f6d6e01368d46bc9c93de3a7e30bfb1)
+[User Stories WIP](./user-stories.md)
 
 **Networking**
 
