@@ -95,7 +95,7 @@ Changes in the codebase should reflect with versioning. We advise using [semanti
 
 Implementing the above-mentioned user stories will require you to supply the transactions with a cadence code. To avoid making mistakes in the cadence code we advise you to use our templates defined in the repo [TBD]
 
-[Cadence Templates](https://www.notion.so/Cadence-Templates-730691bce6264f66b8aa8e9dc9eb6a05)
+[Cadence Templates](/templates/cadence)
 
 **Error Handling**
 
