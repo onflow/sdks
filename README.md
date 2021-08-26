@@ -1,3 +1,30 @@
+<br />
+<p align="center">
+  <a href="https://docs.onflow.org/emulator/">
+    <img src="./sdk-guidelines-banner.svg" alt="Logo" width="610" height="auto">
+  </a>
+
+  <p align="center">
+    <i>Guidelines and resources for building Flow SDKs and client libraries</i>
+    <br />
+    <a href="https://github.com/onflow/sdks/pulls"><strong>Suggest a Guideline»</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/onflow/flow-emulator/issues">Suggest a Change</a>
+    ·
+    <a href="https://github.com/onflow/flow-emulator/blob/master/CONTRIBUTING.md">Contribute</a>
+  </p>
+</p>
+<br />
+<br />
+
+# Flow SDKs Guidelines
+
+This repository defines guidelines, not rules. 
+It aims to help you build and maintain a high-quality SDK Flow, 
+but you should feel free to make design decisions that best language
+or framework you are working in.
+
 The guidelines will help you build SDKs that will be:
 
 ### **Consistent**
