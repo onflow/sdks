@@ -119,7 +119,7 @@ Follow best practices in optimizing the integration and deployment workflow. Mak
 
 We like to follow the philosophy of tasks not being done until they are documented. Our SDK documentation is built by using example templates in each of the SDK repos. Please provide all code examples with optional comments.
 
-[Documentation Templates [WIP]](https://www.notion.so/Documentation-Templates-WIP-a24b3309dcc1467fbee320f876561781)
+[Documentation Templates [WIP]](/templates/documentation)
 
 **Repository**
 
