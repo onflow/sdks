@@ -47,10 +47,10 @@ We have divided the SDK implementation process into multiple steps. You can go t
 
 SDK should provide good isolation between domain functionalities, we believe that networking and cryptography shouldn't be implemented by you, but instead provide a common interface and leverage good and secure implementation of the third-party SDKs. There are multiple reasons behind this architectural decision:
 
-- security - implementing your own cryptography functions can be too complex which might lead to mistakes that will be costly.
-- complexity - leverage work from other libraries and this way lower the friction for implementing the SDK
-- maintainability - cryptography operations can change and it is important to stay on top of those changes
-- testability - isolating networking layer will give you an easier option to swap that part during testing with a mock implementation
+- **security** - implementing your own cryptography functions can be too complex which might lead to mistakes that will be costly.
+- **complexity** - leverage work from other libraries and this way lower the friction for implementing the SDK
+- **maintainability** - cryptography operations can change and it is important to stay on top of those changes
+- **testability** - isolating networking layer will give you an easier option to swap that part during testing with a mock implementation
 
     ![SDK Schema](schema-sdk.png)
 
@@ -77,12 +77,10 @@ Implementation of the SDK should be done by following user stories. Bellow-defin
 
 Access nodes currently support two APIs:
 
-- REST
-
+- **REST**
     Implementing REST API is recommended. REST API specifications can be found [here](TBD) and you can use a mock REST API for testing found [here](TBD)
 
-- GRPC
-
+- **GRPC**
     Implementing gRPC protocol can be done by using the [protobufs found here](https://github.com/onflow/flow/tree/master/protobuf) and by using [the documentation](https://docs.onflow.org/access-api/)
 
 Communication with access nodes should be contained in a networking module exposing only an interface and thus isolating the implementation from the rest of the SDK. This will allow you to easily test the library with mocking and allowed you to reuse third-party libraries. 
