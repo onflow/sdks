@@ -18,12 +18,8 @@
 <br />
 <br />
 
-# Flow SDKs Guidelines
 
-This repository defines guidelines, not rules. 
-It aims to help you build and maintain a high-quality SDK Flow, 
-but you should feel free to make design decisions that best language
-or framework you are working in.
+_This repository defines guidelines, not rules. It aims to help you build and maintain a high-quality SDK Flow, but you should feel free to make design decisions that best language or framework you are working in._
 
 The guidelines will help you build SDKs that will be:
 
