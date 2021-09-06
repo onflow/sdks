@@ -1,0 +1,42 @@
+{
+  "title": "Test Key encoding",
+  "description": "Testing public key encoding with selected algorithms",
+  "tests": {
+       "sig algo: ECDSA P256, hash algo: SHA3 256, weight: 0": {
+         "in": {
+           "sigAlgo": "ECDSA_P256",
+           "hashAlgo": "SHA3_256",
+           "weight": 0,
+           "key": "0bfcd8790c3ce88f3fac9d4bd23514f48bf0cdd1f6c3c8bdf87b11489b1bbeca1ef805ec2ee76451e9bdb265284f78febaeacbc8b0827e0a7baafee4e655d0b5"
+         },
+         "out": "f845b8400bfcd8790c3ce88f3fac9d4bd23514f48bf0cdd1f6c3c8bdf87b11489b1bbeca1ef805ec2ee76451e9bdb265284f78febaeacbc8b0827e0a7baafee4e655d0b5020380"
+       },
+      "sig algo: ECDSA P256, hash algo: SHA3_256, weight: 32": {
+        "in": {
+          "sigAlgo": "ECDSA_P256",
+          "hashAlgo": "SHA3_256",
+          "weight": 32,
+          "key": "0bfcd8790c3ce88f3fac9d4bd23514f48bf0cdd1f6c3c8bdf87b11489b1bbeca1ef805ec2ee76451e9bdb265284f78febaeacbc8b0827e0a7baafee4e655d0b5"
+        },
+        "out": "f845b8400bfcd8790c3ce88f3fac9d4bd23514f48bf0cdd1f6c3c8bdf87b11489b1bbeca1ef805ec2ee76451e9bdb265284f78febaeacbc8b0827e0a7baafee4e655d0b5020320"
+      },
+      "sig algo: ECDSA secp256k1, hash algo: SHA3_256, weight: 0": {
+        "in": {
+          "sigAlgo": "ECDSA_secp256k1",
+          "hashAlgo": "SHA3_256",
+          "weight": 0,
+          "key": "0bfcd8790c3ce88f3fac9d4bd23514f48bf0cdd1f6c3c8bdf87b11489b1bbeca1ef805ec2ee76451e9bdb265284f78febaeacbc8b0827e0a7baafee4e655d0b5"
+        },
+        "out": "f845b8400bfcd8790c3ce88f3fac9d4bd23514f48bf0cdd1f6c3c8bdf87b11489b1bbeca1ef805ec2ee76451e9bdb265284f78febaeacbc8b0827e0a7baafee4e655d0b5030380"
+      },
+      "sig algo: ECDSA P256, hash algo: SHA2 256, weight: 0": {
+        "in": {
+          "sigAlgo": "ECDSA_P256",
+          "hashAlgo": "SHA2_256",
+          "weight": 0,
+          "key": "0bfcd8790c3ce88f3fac9d4bd23514f48bf0cdd1f6c3c8bdf87b11489b1bbeca1ef805ec2ee76451e9bdb265284f78febaeacbc8b0827e0a7baafee4e655d0b5"
+        },
+        "out": "f845b8400bfcd8790c3ce88f3fac9d4bd23514f48bf0cdd1f6c3c8bdf87b11489b1bbeca1ef805ec2ee76451e9bdb265284f78febaeacbc8b0827e0a7baafee4e655d0b5020180"
+      }
+  }
+}
