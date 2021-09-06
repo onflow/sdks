@@ -69,16 +69,28 @@ Implementation of the SDK can implement arbitrary feature domains. A feature dom
 
 Implementation of the SDK should be done by following user stories. Bellow-defined users stories are your guide to implementing a feature domain and we support you with test data and fixtures.
 
-**[WIP]**
+**User Stories**
 
-[User Stories WIP](./user-stories.md)
+- Get a transaction
+- Create account
+- Get account balance and contracts
+- Send transaction with arguments and get transaction result
+- Get latest block
+- Execute a script with arguments and parse result
+- Get events for account creation in block range and parse response
+- Send and sign transaction using a third party wallet
+
+**Cryptography**
+
+Cryptographic signing of transactions should be implemented with great care as this can present a huge security issue if done incorrectly. Our advice is to compose your SDK on top of existing cryptographic libraries that are tested and secure.
+You should test your signing implementation by using our test signing fixtures [provided here](/fixtures/README.md).
 
 **Networking**
 
 Access nodes currently support two APIs:
 
 - **REST**
-    Implementing REST API is recommended. REST API specifications can be found [here](TBD) and you can use a mock REST API for testing found [here](TBD)
+    REST API is WIP
 
 - **GRPC**
     Implementing gRPC protocol can be done by using the [protobufs found here](https://github.com/onflow/flow/tree/master/protobuf) and by using [the documentation](https://docs.onflow.org/access-api/)
