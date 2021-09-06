@@ -1,7 +1,0 @@
-- Create account
-- Get account balance and contracts
-- Send transaction with arguments and get transaction result 
-- Get latest block
-- Execute a script with arguments and parse result
-- Get events for account creation in block range and parse response
-- Send and sign transaction using a third party wallet
