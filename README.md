@@ -56,7 +56,7 @@ SDK should provide good isolation between domain functionalities, we believe tha
 
 When designing an SDK interface it is advisable you follow our ubiquitous language, this will achieve the goal of consistency. You can read about the ubiquitous language here: 
 
-[SDK Ubiquitous Language [WIP]](ubiquitous-language.md)
+[SDK Ubiquitous Language](ubiquitous-language.md)
 
 Implementation of the SDK can implement arbitrary feature domains. A feature domain is a set of related features that define a common interface. Each language-specific implementation of the SDK can implement an arbitrary set of feature domains and be advertised as such thus removing the idea of one SDK per language to rule them all. The concepts of implementing different feature domains follow the philosophy of composability and "doing one thing and doing it well".
 
@@ -81,14 +81,34 @@ After communication with the access node is implemented the best way to proceed 
 
 **User Stories**
 
-- Get a transaction
-- Create account
-- Get account balance and contracts
-- Send transaction with arguments and get transaction result
-- Get the latest block
-- Execute a script with arguments and parse result
-- Get events for account creation in block range and parse response
-- Send and sign transaction using a third party wallet
+User stories are an implementation aid to guide you through implementing all the functionality for a full-featured SDK.  
+
+Blocks:
+- [ ] retrieve a block by ID
+
+Collections:
+- [ ] retrieve a collection by ID 
+
+Events:
+- [ ] retrieve events by name in the block height range
+
+Scripts:
+- [ ] submit a script and parse the response
+- [ ] submit a script with arguments and parse the response
+
+Accounts:
+- [ ] retrieve an account by address
+- [ ] create a new account
+- [ ] deploy a new contract to the account
+- [ ] remove a contract from the account
+- [ ] update an existing contract on the account
+
+Transactions: 
+- [ ] retrieve a transaction by ID
+- [ ] sign a transaction (single payer, proposer, authorizer or combination of multiple) 
+- [ ] submit a signed transaction
+- [ ] sign a transaction with arguments and submit it
+
 
 **Cryptography**
 
