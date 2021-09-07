@@ -115,16 +115,17 @@ Transactions:
 Cryptographic signing of transactions should be implemented with great care as this can present a huge security issue if done incorrectly. Our advice is to compose your SDK on top of existing cryptographic libraries that are tested and secure.
 You should be familiar with the [signing process used on Flow](https://docs.onflow.org/concepts/accounts-and-keys/) and test your implementation by using our test signing fixtures [provided here](/fixtures/README.md).
 
+*When signing a transaction payload be mindful of the domain tag which needs to be prepended to the encoded payload before the signing process takes place.*  
 
 **Networking**
 
 Access nodes currently support two APIs:
 
 - **REST**
-    REST API is WIP
+    REST API is work-in-progress and delivery date is yet to be announced
 
 - **GRPC**
-    Implementing gRPC protocol can be done by using the [protobufs found here](https://github.com/onflow/flow/tree/master/protobuf) and by using [the documentation](https://docs.onflow.org/access-api/)
+    Implementing gRPC protocol can be done by using the [protobufs found here](https://github.com/onflow/flow/tree/master/protobuf) and by using [the documentation](https://docs.onflow.org/access-api/). You can read how to generate client resources from protobufs in [this tutorial](https://grpc.io/docs/languages/go/basics/#client) 
 
 Communication with access nodes should be contained in a networking module exposing only an interface and thus isolating the implementation from the rest of the SDK. This will allow you to easily test the library with mocking and allowed you to reuse third-party libraries. 
 
