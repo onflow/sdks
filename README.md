@@ -69,13 +69,23 @@ Implementation of the SDK can implement arbitrary feature domains. A feature dom
 
 Implementation of the SDK should be done by following user stories. Bellow-defined users stories are your guide to implementing a feature domain and we support you with test data and fixtures.
 
+**Overview**
+
+Building a full-featured SDK will involve a few steps:
+- Access node client: enable connection to the emulator or any access node using GRPC or REST
+- Encoding/decoding cadence: ability to parse results from cadence value to SDK objects and vice versa
+- Transaction signing: implement signing in order to submit valid transactions
+- Developer UX: implement validations, factory methods for different resources, offer templates, documentation
+
+After communication with the access node is implemented the best way to proceed is to follow common user stories defined bellow:
+
 **User Stories**
 
 - Get a transaction
 - Create account
 - Get account balance and contracts
 - Send transaction with arguments and get transaction result
-- Get latest block
+- Get the latest block
 - Execute a script with arguments and parse result
 - Get events for account creation in block range and parse response
 - Send and sign transaction using a third party wallet
@@ -83,7 +93,8 @@ Implementation of the SDK should be done by following user stories. Bellow-defin
 **Cryptography**
 
 Cryptographic signing of transactions should be implemented with great care as this can present a huge security issue if done incorrectly. Our advice is to compose your SDK on top of existing cryptographic libraries that are tested and secure.
-You should test your signing implementation by using our test signing fixtures [provided here](/fixtures/README.md).
+You should be familiar with the [signing process used on Flow](https://docs.onflow.org/concepts/accounts-and-keys/) and test your implementation by using our test signing fixtures [provided here](/fixtures/README.md).
+
 
 **Networking**
 
