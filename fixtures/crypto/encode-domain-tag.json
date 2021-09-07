@@ -1,0 +1,14 @@
+{
+  "title": "Test domain tag encoding",
+  "description": "Testing encoding of domain tag",
+  "tests": {
+    "user tag": {
+      "in": "FLOW-V0.0-user",
+      "out": "464c4f572d56302e302d75736572000000000000000000000000000000000000"
+    },
+    "transaction tag": {
+      "in": "FLOW-V0.0-transaction",
+      "out": "464c4f572d56302e302d7472616e73616374696f6e0000000000000000000000"
+    }
+  }
+}
