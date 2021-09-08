@@ -113,7 +113,7 @@ Transactions:
 **Cryptography**
 
 Cryptographic signing of transactions should be implemented with great care as this can present a huge security issue if done incorrectly. Our advice is to compose your SDK on top of existing cryptographic libraries that are tested and secure.
-You should be familiar with the [signing process used on Flow](https://docs.onflow.org/concepts/accounts-and-keys/) and test your implementation by using our test signing fixtures [provided here](/fixtures/README.md).
+You should be familiar with the [signing process used on Flow](https://docs.onflow.org/concepts/accounts-and-keys/) and test your encoding implementation by using our test fixtures [provided here](/fixtures/README.md).
 
 *When signing a transaction payload be mindful of the domain tag which needs to be prepended to the encoded payload before the signing process takes place.*  
 

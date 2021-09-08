@@ -7,17 +7,20 @@ Fixtures are JSON files that should be fed to your tests containing input values
 **Example Usage**
 
 Here is an example on how to test your RLP encoding implementation in javascript.
-```js
-const rlpData = require('../fixtures/crypto/rlp.json')
 
-describe(`${rlpData.title}`, function() {
-    
-  for (const name in rlpData.tests) {
-    it(`passes ${name}`, function(done) {
-      const output = RLP.encode(rlpData.tests[name].in)
-      assert.equal('0x' + output.toString('hex'), rlpData.tests[name].out.toLowerCase())
-      done()
-    })
-  }
+```js
+const rlpData = require('./rlp.json')
+
+describe(`${rlpData.title}`, function () {
+    // go through each test data example
+    for (const name in rlpData.tests) {
+        it(`passes ${name}`, function (done) {
+            // your RLP encoding implementation fed with test data
+            const output = RLP.encode(rlpData.tests[name].in) 
+            // assert the ouput of your RLP encoding implementation matches test data
+            assert.equal('0x' + output.toString('hex'), rlpData.tests[name].out.toLowerCase())
+            done()
+        })
+    }
 })
 ```
