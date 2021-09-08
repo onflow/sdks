@@ -54,15 +54,15 @@ SDK should provide good isolation between domain functionalities, we believe tha
 
     ![SDK Schema](schema-sdk.png)
 
-*NOTE: Ubiquitous langauge is work in progress: When designing an SDK interface it is advisable you follow our ubiquitous language, this will achieve the goal of consistency. You can read about the ubiquitous language here:
-[SDK Ubiquitous Language](ubiquitous-language.md)*
-
 Implementation of the SDK can implement arbitrary feature domains. A feature domain is a set of related features that define a common interface. Each language-specific implementation of the SDK can implement an arbitrary set of feature domains and be advertised as such thus removing the idea of one SDK per language to rule them all. The concepts of implementing different feature domains follow the philosophy of composability and "doing one thing and doing it well".
 
 **Feature Domains [WIP]**
 
 - **SDK** - Implementing access node API
 - **FCL** - Wallet discovery
+
+*NOTE: Ubiquitous langauge is work in progress: When designing an SDK interface it is advisable you follow our ubiquitous language, this will achieve the goal of consistency. You can read about the ubiquitous language here:
+[SDK Ubiquitous Language](ubiquitous-language.md)*
 
 ## Implementation
 
