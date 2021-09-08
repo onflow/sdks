@@ -125,9 +125,9 @@ Access nodes currently support two APIs:
     REST API is work-in-progress and delivery date is yet to be announced
 
 - **GRPC**
-    Implementing gRPC protocol can be done by using the [protobufs found here](https://github.com/onflow/flow/tree/master/protobuf) and by using [the documentation](https://docs.onflow.org/access-api/). You can read how to generate client resources from protobufs in [this tutorial](https://grpc.io/docs/languages/go/basics/#client) 
+    Implementing gRPC protocol can be done by using the [protobufs found here](https://github.com/onflow/flow/tree/master/protobuf) and by using [the documentation](https://docs.onflow.org/access-api/). You can read how to generate client resources from protobufs in [this tutorial](https://grpc.io/docs/languages/go/basics/#client). Using generated clients is advisable so you can leverage the encoding/decoding of the data. 
 
-Communication with access nodes should be contained in a networking module exposing only an interface and thus isolating the implementation from the rest of the SDK. This will allow you to easily test the library with mocking and allowed you to reuse third-party libraries. 
+Communication with access nodes should be contained in a networking module exposing only an interface and thus isolating the implementation from the rest of the SDK. This will allow you to easily test the library by mocking the module, it will also allow you to change the API type if needed (migration from gRPC to REST will be easy), and make it possible for you to reuse third-party libraries. It's advisable to leverage popular third party libraries to do network communication as it  will provide faster and more secure implementation.
 
 Executing network requests should provide a mechanism to control the request after being sent, this would allow the application using the SDK to cancel the request, set different timeouts, and in general give control to the user. Networking should be implemented in asynchronous or synchronous nature, based on what is idiomatic in the specific language but prefer asynchronous if possible.
 
