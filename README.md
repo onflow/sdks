@@ -85,6 +85,8 @@ User stories are an implementation aid to guide you through implementing all the
 
 Blocks:
 - [ ] retrieve a block by ID
+- [ ] retrieve a block by height
+- [ ] retrieve the latest block
 
 Collections:
 - [ ] retrieve a collection by ID 
@@ -163,7 +165,7 @@ Follow best practices in optimizing the integration and deployment workflow. Mak
 
 We like to follow the philosophy of tasks not being done until they are documented. Our SDK documentation is built by using example templates in each of the SDK repos. Please provide all code examples with optional comments.
 
-[Documentation Templates [WIP]](/templates/documentation)
+[Documentation Templates](/templates/documentation)
 
 **Repository**
 
