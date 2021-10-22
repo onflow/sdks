@@ -95,7 +95,8 @@ Events:
 
 Scripts:
 - [ ] submit a script and parse the response
-- [ ] submit a script with arguments and parse the response
+- [ ] submit a script with arguments
+- [ ] create a script that returns complex structure and parse the response
 
 Accounts:
 - [ ] retrieve an account by address
@@ -106,7 +107,9 @@ Accounts:
 
 Transactions: 
 - [ ] retrieve a transaction by ID
-- [ ] sign a transaction (single payer, proposer, authorizer or combination of multiple) 
+- [ ] sign a transaction with same payer, proposer and authorizer
+- [ ] sign a transaction with different payer and proposer
+- [ ] sign a transaction with different authorizers using sign method multiple times
 - [ ] submit a signed transaction
 - [ ] sign a transaction with arguments and submit it
 
@@ -150,6 +153,10 @@ Writing code by exercising [defensive design](https://en.wikipedia.org/wiki/Defe
 
 Logging is an optional functionality of the SDK and it is meant to be of assistance to the developer implementing your SDK, however, please be careful that logging is implemented as an isolated module and it should be possible to disable it. It is advisable to also use third-party logging libraries which should be plugged into the SDK.
 
+**Publishing**
+
+Publish the SDK by using the standard package repository for the implementation language. This way the SDK will be easy to discover and install.
+
 ## Testing
 
 Writing good tests is a crucial task in pursuit of reliability. We will assist you with our testing data [TBD] you can use to mock responses for each user story. After implementing unit tests you should add integration tests by using our testing mock APIs found here [TBD]. Mock API exposes the same API interface as the access node and returns mock results which you can assert. 
@@ -162,9 +169,8 @@ Follow best practices in optimizing the integration and deployment workflow. Mak
 
 ## Documentation
 
-We like to follow the philosophy of tasks not being done until they are documented. Our SDK documentation is built by using example templates in each of the SDK repos. Please provide all code examples with optional comments.
-
-[Documentation Templates](/templates/documentation)
+We like to follow the philosophy of tasks not being done until they are documented. Our SDK documentation is built by using the documentation template.
+[Documentation Template](/templates/documentation)
 
 **Repository**
 
@@ -172,7 +178,8 @@ Each SDK should have a repository that contains the following documents: readme,
 
 **Specifications**
 
-Your SDK should include API specifications. This requirement is to achieve better accessibility as described in the goals section. The codebase should be well-commented code and leverage specification generation tools available for each language. 
+Make sure you also generate specifications for your SDK public API, that specification should then be linked in the documentation template.
+This requirement is to achieve better accessibility as described in the goals section. The codebase should be well-commented code and leverage specification generation tools available for each language. Try to use the standard or most popular specification syntax and generators. Generating specification based on comments will allow better understanding for people reading through source code, it will provide intellisense functionality in IDEs and will allow you to keep documentation updated without the need to change any texts in the docs as the references will be linked and updated.
 
 ## Maintaining
 
