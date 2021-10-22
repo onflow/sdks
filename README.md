@@ -159,7 +159,9 @@ Publish the SDK by using the standard package repository for the implementation 
 
 ## Testing
 
-Writing good tests is a crucial task in pursuit of reliability. We will assist you with our testing data [TBD] you can use to mock responses for each user story. After implementing unit tests you should add integration tests by using our testing mock APIs found here [TBD]. Mock API exposes the same API interface as the access node and returns mock results which you can assert. 
+Writing good tests is a crucial task in pursuit of reliability. We will assist you with our testing data by providing you some [fixtures you can find here](https://github.com/onflow/sdks/tree/main/fixtures). 
+
+*WIP not available yet: After implementing unit tests you should add integration tests by using our testing mock APIs found here [TBD]. Mock API exposes the same API interface as the access node and returns mock results which you can assert.*
 
 An SDK could optionally expose the testing functionality thus making it possible for developers using the SDK to switch to mock implementation and test their application easier. (rephrase)
 
