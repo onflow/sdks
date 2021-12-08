@@ -333,7 +333,7 @@ Flow supports great flexibility when it comes to transaction signing, we can def
 
 | Account | Key ID | Weight |
 | ------- | ------ | ------ |
-| `0x01`  | 1      | 1.0    |
+| `0x01`  | 1      | 1000   |
 
 **[<img src="https://raw.githubusercontent.com/onflow/sdks/main/templates/documentation/try.svg" width="130">](https://github.com/onflow/flow-go-sdk/tree/master/examples#single-party-single-signature)**
 ```
@@ -345,12 +345,12 @@ Flow supports great flexibility when it comes to transaction signing, we can def
 
 - Proposer, payer and authorizer are the same account (`0x01`).
 - Only the envelope must be signed.
-- Each key has weight 0.5, so two signatures are required.
+- Each key has weight 500, so two signatures are required.
 
 | Account | Key ID | Weight |
 | ------- | ------ | ------ |
-| `0x01`  | 1      | 0.5    |
-| `0x01`  | 2      | 0.5    |
+| `0x01`  | 1      | 500    |
+| `0x01`  | 2      | 500    |
 
 **[<img src="https://raw.githubusercontent.com/onflow/sdks/main/templates/documentation/try.svg" width="130">](https://github.com/onflow/flow-go-sdk/tree/master/examples#single-party-multiple-signatures)**
 ```
@@ -367,8 +367,8 @@ Flow supports great flexibility when it comes to transaction signing, we can def
 
 | Account | Key ID | Weight |
 | ------- | ------ | ------ |
-| `0x01`  | 1      | 1.0    |
-| `0x02`  | 3      | 1.0    |
+| `0x01`  | 1      | 1000   |
+| `0x02`  | 3      | 1000   |
 
 **[<img src="https://raw.githubusercontent.com/onflow/sdks/main/templates/documentation/try.svg" width="130">](https://github.com/onflow/flow-go-sdk/tree/master/examples#multiple-parties)**
 ```
@@ -386,8 +386,8 @@ Flow supports great flexibility when it comes to transaction signing, we can def
 
 | Account | Key ID | Weight |
 | ------- | ------ | ------ |
-| `0x01`  | 1      | 1.0    |
-| `0x02`  | 3      | 1.0    |
+| `0x01`  | 1      | 1000   |
+| `0x02`  | 3      | 1000   |
 
 **[<img src="https://raw.githubusercontent.com/onflow/sdks/main/templates/documentation/try.svg" width="130">](https://github.com/onflow/flow-go-sdk/tree/master/examples#multiple-parties-two-authorizers)**
 ```
@@ -405,10 +405,10 @@ Flow supports great flexibility when it comes to transaction signing, we can def
 
 | Account | Key ID | Weight |
 | ------- | ------ | ------ |
-| `0x01`  | 1      | 0.5    |
-| `0x01`  | 2      | 0.5    |
-| `0x02`  | 3      | 0.5    |
-| `0x02`  | 4      | 0.5    |
+| `0x01`  | 1      | 500    |
+| `0x01`  | 2      | 500    |
+| `0x02`  | 3      | 500    |
+| `0x02`  | 4      | 500    |
 
 **[<img src="https://raw.githubusercontent.com/onflow/sdks/main/templates/documentation/try.svg" width="130">]()** // TODO example link
 ```
