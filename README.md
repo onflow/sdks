@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://docs.onflow.org/emulator/">
-    <img src="./sdk-guidelines-banner.svg" alt="Logo" width="610" height="auto">
+    <img src="./sdk-guidelines-banner.svg" alt="Logo" width="610" height="auto" />
   </a>
 
   <p align="center">
