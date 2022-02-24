@@ -1,5 +1,5 @@
 transaction(keyIndex: Int) {
 	prepare(signer: AuthAccount) {
-		signer.removePublicKey(keyIndex)
+		signer.keys.revoke(keyIndex)
 	}
 }
