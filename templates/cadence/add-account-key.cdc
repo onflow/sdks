@@ -1,7 +1,7 @@
 transaction(publicKey: String) {
 	prepare(signer: AuthAccount) {
 		let key = PublicKey(
-		    publicKey: publicKey,
+		    publicKey: publicKey.decodeHex(),
 		    signatureAlgorithm: SignatureAlgorithm.ECDSA_P256
         	)
 
