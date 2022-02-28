@@ -4,7 +4,7 @@ transaction(publicKeys: [String], contracts: {String: String}) {
 
 		for publicKey in publicKeys {
 		    let key = PublicKey(
-			publicKey: publicKey,
+			publicKey: publicKey.decodeHex(),
 			signatureAlgorithm: SignatureAlgorithm.ECDSA_P256
 		    )
 
