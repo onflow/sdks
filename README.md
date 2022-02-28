@@ -71,7 +71,7 @@ Implementation of the SDK should be done by following user stories. Bellow-defin
 **Overview**
 
 Building a full-featured SDK will involve a few steps:
-- Access node client: enable connection to the emulator or any access node using GRPC or REST
+- Access node client: enable connection to the emulator or any access node using GRPC or HTTP
 - Encoding/decoding cadence: ability to parse results from cadence value to SDK objects and vice versa
 - Transaction signing: implement signing in order to submit valid transactions
 - Developer UX: implement validations, factory methods for different resources, offer templates, documentation
@@ -125,13 +125,13 @@ You should be familiar with the [signing process used on Flow](https://docs.onfl
 
 Access nodes currently support two APIs:
 
-- **REST**
-    REST API is work-in-progress and delivery date is yet to be announced
+- **HTTP**
+    The HTTP API is available and the documentation [can be found here](https://docs.onflow.org/http-api/). The HTTP API is defined by the Open API schema which [can be found here](https://github.com/onflow/flow/tree/master/openapi) and can be used to generate client code.
 
 - **GRPC**
     Implementing gRPC protocol can be done by using the [protobufs found here](https://github.com/onflow/flow/tree/master/protobuf) and by using [the documentation](https://docs.onflow.org/access-api/). You can read how to generate client resources from protobufs in [this tutorial](https://grpc.io/docs/languages/go/basics/#client). Using generated clients is advisable so you can leverage the encoding/decoding of the data. 
 
-Communication with access nodes should be contained in a networking module exposing only an interface and thus isolating the implementation from the rest of the SDK. This will allow you to easily test the library by mocking the module, it will also allow you to change the API type if needed (migration from gRPC to REST will be easy), and make it possible for you to reuse third-party libraries. It's advisable to leverage popular third party libraries to do network communication as it  will provide faster and more secure implementation.
+Communication with access nodes should be contained in a networking module exposing only an interface and thus isolating the implementation from the rest of the SDK. This will allow you to easily test the library by mocking the module, it will also allow you to change the API type if needed (migration from gRPC to HTTP will be easy), and make it possible for you to reuse third-party libraries. It's advisable to leverage popular third party libraries to do network communication as it  will provide faster and more secure implementation.
 
 Executing network requests should provide a mechanism to control the request after being sent, this would allow the application using the SDK to cancel the request, set different timeouts, and in general give control to the user. Networking should be implemented in asynchronous or synchronous nature, based on what is idiomatic in the specific language but prefer asynchronous if possible.
 
