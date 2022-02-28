@@ -3,16 +3,16 @@ transaction(publicKeys: [String], contracts: {String: String}) {
 		let acct = AuthAccount(payer: signer)
 
 		for publicKey in publicKeys {
-            let key = PublicKey(
-                publicKey: publicKey,
-                signatureAlgorithm: SignatureAlgorithm.ECDSA_P256
-            )
+		    let key = PublicKey(
+			publicKey: publicKey,
+			signatureAlgorithm: SignatureAlgorithm.ECDSA_P256
+		    )
 
-            acct.keys.add(
-                publicKey: key,
-                hashAlgorithm: HashAlgorithm.SHA3_256,
-                weight: 10.0
-            )
+		    acct.keys.add(
+			publicKey: key,
+			hashAlgorithm: HashAlgorithm.SHA3_256,
+			weight: 10.0
+		    )
 		}
 
 		for contract in contracts.keys {
