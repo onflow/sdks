@@ -1,3 +1,3 @@
-module github.com/onflow/flow-core-contracts
+module github.com/onflow/sdks
 
 go 1.17
