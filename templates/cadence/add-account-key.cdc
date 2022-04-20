@@ -1,14 +1,8 @@
-transaction(publicKey: String) {
-	prepare(signer: AuthAccount) {
-		let key = PublicKey(
-		    publicKey: publicKey.decodeHex(),
-		    signatureAlgorithm: SignatureAlgorithm.ECDSA_P256
-        	)
+import Crypto
 
-		signer.keys.add(
-		    publicKey: key,
-		    hashAlgorithm: HashAlgorithm.SHA3_256,
-		    weight: 10.0
-		)
+transaction(key: Crypto.KeyListEntry) {
+	prepare(signer: AuthAccount) {
+		signer.keys.add(publicKey: key.publicKey, hashAlgorithm: key.hashAlgorithm, weight: key.weight)
 	}
 }
+ 

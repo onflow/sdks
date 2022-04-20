@@ -1,22 +1,18 @@
-transaction(publicKeys: [String], contracts: {String: String}) {
+import Crypto
+
+transaction(publicKeys: [Crypto.KeyListEntry], contracts: {String: String}) {
 	prepare(signer: AuthAccount) {
-		let acct = AuthAccount(payer: signer)
+		let account = AuthAccount(payer: signer)
 
-		for publicKey in publicKeys {
-		    let key = PublicKey(
-			publicKey: publicKey.decodeHex(),
-			signatureAlgorithm: SignatureAlgorithm.ECDSA_P256
-		    )
-
-		    acct.keys.add(
-			publicKey: key,
-			hashAlgorithm: HashAlgorithm.SHA3_256,
-			weight: 10.0
-		    )
+		// add all the keys to the account
+		for key in publicKeys {
+			account.keys.add(publicKey: key.publicKey, hashAlgorithm: key.hashAlgorithm, weight: key.weight)
 		}
-
+		
+		// add contracts if provided
 		for contract in contracts.keys {
-			acct.contracts.add(name: contract, code: contracts[contract]!.decodeHex())
+			account.contracts.add(name: contract, code: contracts[contract]!.decodeHex())
 		}
 	}
 }
+ 
