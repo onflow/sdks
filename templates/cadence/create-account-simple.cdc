@@ -1,4 +1,4 @@
-transaction(publicKeys: [String], sigAlgos: [SignatureAlgorithm], hashAlgos: [HashAlgorithm], weights: [UFix64] contracts: {String: String}) {
+transaction(publicKeys: [String], sigAlgos: [SignatureAlgorithm], hashAlgos: [HashAlgorithm], weights: [UFix64], contracts: {String: String}) {
 	prepare(signer: AuthAccount) {
 		let acct = AuthAccount(payer: signer)
 
