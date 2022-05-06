@@ -1,0 +1,340 @@
+{
+  "type": "Struct",
+  "value": {
+    "id": "I.Crypto.Crypto.KeyListEntry",
+    "fields": [
+      {
+        "name": "keyIndex",
+        "value": {
+          "type": "Int",
+          "value": "1000"
+        }
+      },
+      {
+        "name": "publicKey",
+        "value": {
+          "type": "Struct",
+          "value": {
+            "id": "PublicKey",
+            "fields": [
+              {
+                "name": "publicKey",
+                "value": {
+                  "type": "Array",
+                  "value": [
+                    {
+                      "type": "UInt8",
+                      "value": "141"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "166"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "11"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "217"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "138"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "130"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "124"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "135"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "226"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "22"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "34"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "197"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "7"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "10"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "227"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "238"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "68"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "10"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "191"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "9"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "39"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "213"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "219"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "51"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "249"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "101"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "44"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "177"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "48"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "62"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "184"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "160"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "77"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "254"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "65"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "222"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "162"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "201"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "234"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "100"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "238"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "131"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "238"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "141"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "124"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "141"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "6"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "141"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "184"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "56"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "108"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "123"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "171"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "152"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "105"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "74"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "249"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "86"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "224"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "253"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "174"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "55"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "24"
+                    },
+                    {
+                      "type": "UInt8",
+                      "value": "78"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "signatureAlgorithm",
+                "value": {
+                  "type": "Enum",
+                  "value": {
+                    "id": "SignatureAlgorithm",
+                    "fields": [
+                      {
+                        "name": "rawValue",
+                        "value": {
+                          "type": "UInt8",
+                          "value": "1"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "hashAlgorithm",
+        "value": {
+          "type": "Enum",
+          "value": {
+            "id": "HashAlgorithm",
+            "fields": [
+              {
+                "name": "rawValue",
+                "value": {
+                  "type": "UInt8",
+                  "value": "3"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "weight",
+        "value": {
+          "type": "UFix64",
+          "value": "1000.00000000"
+        }
+      },
+      {
+        "name": "isRevoked",
+        "value": {
+          "type": "Bool",
+          "value": false
+        }
+      }
+    ]
+  }
+}
