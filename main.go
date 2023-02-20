@@ -11,6 +11,9 @@ var AddContract string
 //go:embed templates/cadence/create-account.cdc
 var CreateAccount string
 
+//go:embed templates/cadence/create-and-fund-account.cdc
+var CreateAccountFunding string
+
 //go:embed templates/cadence/revoke-account-key.cdc
 var RemoveAccountKey string
 
