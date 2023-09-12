@@ -1,8 +1,8 @@
 import Crypto
 
 transaction(publicKeys: [Crypto.KeyListEntry], contracts: {String: String}) {
-	prepare(signer: AuthAccount) {
-		let account = AuthAccount(payer: signer)
+	prepare(signer: auth(BorrowValue) &Account) {
+		let account = Account(payer: signer)
 
 		// add all the keys to the account
 		for key in publicKeys {

@@ -1,6 +1,6 @@
 transaction(publicKeys: [String], sigAlgos: [SignatureAlgorithm], hashAlgos: [HashAlgorithm], weights: [UFix64], contracts: {String: String}) {
-	prepare(signer: AuthAccount) {
-		let acct = AuthAccount(payer: signer)
+	prepare(signer: auth(BorrowValue) &Account) {
+		let acct = Account(payer: signer)
 
 		if (sigAlgos.length != publicKeys.length || hashAlgos.length != publicKeys.length || weights.length != publicKeys.length) {
 			panic("Length missmatch of passed arguments: public keys, signature algorithms, hashing algorithms and weights arrays must all have same length.")

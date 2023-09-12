@@ -6,8 +6,8 @@ transaction(publicKeys: [Crypto.KeyListEntry], contracts: {String: String}, fund
     let tokenReceiver: &{FungibleToken.Receiver}
     let sentVault: @FungibleToken.Vault
 
-	prepare(signer: AuthAccount) {
-		let account = AuthAccount(payer: signer)
+	prepare(signer: auth(BorrowValue) &Account) {
+		let account = Account(payer: signer)
 
 		// add all the keys to the account
 		for key in publicKeys {
@@ -20,11 +20,11 @@ transaction(publicKeys: [Crypto.KeyListEntry], contracts: {String: String}, fund
 		}
 
 		self.tokenReceiver = account
-          .getCapability(/public/flowTokenReceiver)!
-          .borrow<&{FungibleToken.Receiver}>()
+          .capabilities.get<&{FungibleToken.Receiver}>(/public/flowTokenReceiver)!
+          .borrow()
           ?? panic("Unable to borrow receiver reference")
 
-        let vaultRef = signer.borrow<&FlowToken.Vault>(from: /storage/flowTokenVault)
+        let vaultRef = signer.storage.borrow<&FlowToken.Vault>(from: /storage/flowTokenVault)
             ?? panic("Could not borrow reference to the owner's Vault!")
 
         self.sentVault <- vaultRef.withdraw(amount: fundAmount)

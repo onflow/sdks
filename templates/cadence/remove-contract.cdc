@@ -1,5 +1,5 @@
 transaction(name: String) {
-	prepare(signer: AuthAccount) {
+	prepare(signer: auth(RemoveContract) &Account) {
 		signer.contracts.remove(name: name)
 	}
 }
