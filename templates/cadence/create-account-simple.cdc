@@ -20,7 +20,7 @@ transaction(publicKeys: [String], sigAlgos: [SignatureAlgorithm], hashAlgos: [Ha
 		}
 
 		for contract in contracts.keys {
-			acct.contracts.add(name: contract, code: contracts[contract]!.decodeHex())
+			acct.contracts.add(name: contract, code: contracts[contract]!.utf8)
 		}
 	}
 }
