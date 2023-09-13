@@ -16,7 +16,7 @@ transaction(publicKeys: [Crypto.KeyListEntry], contracts: {String: String}, fund
 
 		// add contracts if provided
 		for contract in contracts.keys {
-			account.contracts.add(name: contract, code: contracts[contract]!.decodeHex())
+			account.contracts.add(name: contract, code: contracts[contract]!.utf8)
 		}
 
 		self.tokenReceiver = account

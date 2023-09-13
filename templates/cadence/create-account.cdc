@@ -8,11 +8,10 @@ transaction(publicKeys: [Crypto.KeyListEntry], contracts: {String: String}) {
 		for key in publicKeys {
 			account.keys.add(publicKey: key.publicKey, hashAlgorithm: key.hashAlgorithm, weight: key.weight)
 		}
-		
+
 		// add contracts if provided
 		for contract in contracts.keys {
-			account.contracts.add(name: contract, code: contracts[contract]!.decodeHex())
+			account.contracts.add(name: contract, code: contracts[contract]!.utf8)
 		}
 	}
 }
- 
