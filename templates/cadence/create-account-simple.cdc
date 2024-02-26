@@ -7,20 +7,20 @@ transaction(publicKeys: [String], sigAlgos: [SignatureAlgorithm], hashAlgos: [Ha
 		}
 
 		for i, publicKey in publicKeys {
-		    let key = PublicKey(
+			let key = PublicKey(
 				publicKey: publicKey.decodeHex(),
 				signatureAlgorithm: sigAlgos[i]
-		    )
+			)
 
-		    acct.keys.add(
+			acct.keys.add(
 				publicKey: key,
 				hashAlgorithm: hashAlgos[i],
 				weight: weights[i]
-		    )
+			)
 		}
 
-		for contract in contracts.keys {
-			acct.contracts.add(name: contract, code: contracts[contract]!.decodeHex())
+		for contractName in contracts.keys {
+			acct.contracts.add(name: contractName, code: contracts[contractName]!.decodeHex())
 		}
 	}
 }
