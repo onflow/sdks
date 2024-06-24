@@ -3,8 +3,8 @@ import "FlowToken"
 import "FungibleToken"
 
 transaction(publicKeys: [Crypto.KeyListEntry], contracts: {String: String}, fundAmount: UFix64) {
-    let tokenReceiver: &{FungibleToken.Receiver}
-    let sentVault: @FungibleToken.Vault
+	let tokenReceiver: &{FungibleToken.Receiver}
+	let sentVault: @{FungibleToken.Vault}
 
 	prepare(signer: auth(BorrowValue) &Account) {
 		let account = Account(payer: signer)
@@ -15,22 +15,20 @@ transaction(publicKeys: [Crypto.KeyListEntry], contracts: {String: String}, fund
 		}
 
 		// add contracts if provided
-		for contract in contracts.keys {
-			account.contracts.add(name: contract, code: contracts[contract]!.decodeHex())
+		for contractName in contracts.keys {
+			account.contracts.add(name: contractName, code: contracts[contractName]!.decodeHex())
 		}
 
-		self.tokenReceiver = account
-          .capabilities.get<&{FungibleToken.Receiver}>(/public/flowTokenReceiver)!
-          .borrow()
-          ?? panic("Unable to borrow receiver reference")
+		self.tokenReceiver = account.capabilities.borrow<&{FungibleToken.Receiver}>(/public/flowTokenReceiver)
+			?? panic("Unable to borrow receiver reference")
 
-        let vaultRef = signer.storage.borrow<&FlowToken.Vault>(from: /storage/flowTokenVault)
-            ?? panic("Could not borrow reference to the owner's Vault!")
+		let vaultRef = signer.storage.borrow<auth(FungibleToken.Withdraw) &FlowToken.Vault>(from: /storage/flowTokenVault)
+			?? panic("Could not borrow reference to the owner's Vault!")
 
-        self.sentVault <- vaultRef.withdraw(amount: fundAmount)
+		self.sentVault <- vaultRef.withdraw(amount: fundAmount)
 	}
 
 	execute {
-	    self.tokenReceiver.deposit(from: <-self.sentVault)
+		self.tokenReceiver.deposit(from: <-self.sentVault)
 	}
 }

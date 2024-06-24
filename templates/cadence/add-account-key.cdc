@@ -5,4 +5,3 @@ transaction(key: Crypto.KeyListEntry) {
 		signer.keys.add(publicKey: key.publicKey, hashAlgorithm: key.hashAlgorithm, weight: key.weight)
 	}
 }
- 
